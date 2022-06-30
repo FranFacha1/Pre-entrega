@@ -1,8 +1,9 @@
 body {
-    background-color: #50B0D9;
+    /* background-color: #56B66F; */
+    background-image: linear-gradient(to left, #33ba47, #33ba47, #084706 );
 }
 
-.contenedor-boton {
+/* .contenedor-boton {
     display: flex;
     justify-content: center;
 }
@@ -20,3 +21,21 @@ body {
     text-align: center;
     color: white;
 }
+
+.div-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+   list-style-type: none;
+   margin: 10px;
+}
+
+#respuesta2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
