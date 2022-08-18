@@ -86,16 +86,16 @@ console.log(bebidasNuevas);
 
 
 
-// Ejercicio 8 Y 9 
 
-const boton = document.getElementById("boton");
-boton.innerHTML = "No tocar"
 
-const respuesta = document.querySelector("#respuesta");
-// const input = document.querySelector("#input");
+// const boton = document.getElementById("boton");
+// boton.innerHTML = "No tocar"
 
-boton.onclick = () => {
-    const CrearElemento = document.createElement("li");
-    CrearElemento.innerHTML = "¿Porque tocaste?"
-    respuesta.append(CrearElemento);
-}
+// const respuesta = document.querySelector("#respuesta");
+// // const input = document.querySelector("#input");
+
+// boton.onclick = () => {
+//     const CrearElemento = document.createElement("li");
+//     CrearElemento.innerHTML = "¿Porque tocaste?"
+//     respuesta.append(CrearElemento);
+// }

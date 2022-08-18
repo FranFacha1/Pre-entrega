@@ -1,9 +1,9 @@
 body {
-    /* background-color: #56B66F; */
-    background-image: linear-gradient(to left, #33ba47, #33ba47, #084706 );
+    background-image: linear-gradient(to left, #13cedd, #19aee2);    /* background-color: #56B66F; */
+    /* background-image: linear-gradient(to left, #33ba47, #33ba47, #084706 ); */
 }
 
-/* .contenedor-boton {
+.contenedor-boton {
     display: flex;
     justify-content: center;
 }
@@ -38,4 +38,22 @@ li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px black;
+    margin: 20px;
+
+    transition: 1s;
+}
+
+.img:hover {
+    transform: rotate(1deg);
 } */
