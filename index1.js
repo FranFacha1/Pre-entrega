@@ -31,3 +31,21 @@
 //     return Math.floor(Math.random()*bebidaAleatoria.length)
 // }
 
+
+
+// const jugar = document.querySelector("#jugar");
+
+// jugar.onclick = () => {
+//     document.querySelector("img").style.display = "block"
+// }
+
+const boton = document.querySelector("#boton");
+const boton1 = document.querySelector("#boton1");
+
+boton.onclick = () => {
+    document.querySelector("img").style.display = "block";
+}
+
+boton1.onclick = () => {
+    document.querySelector("img").style.display = "none";
+}
