@@ -52,6 +52,7 @@ body {
 }
 
 .titulo {
+    display: none;
     text-align: center;
     color: #fff;
     font-size: 2rem;
@@ -72,6 +73,7 @@ body {
 }
 
 .imgs {
+    display: none;
     border-radius: 20px;
 }
 
@@ -106,6 +108,7 @@ body {
 }
 
 .span {
+    text-align: center;
     margin-top: 20px;
     color: white;
     font-size: 3rem;

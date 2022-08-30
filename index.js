@@ -88,14 +88,14 @@
 
 
 
-const boton = document.getElementById("boton");
-boton.innerHTML = "No tocar"
+// const boton = document.getElementById("boton");
+// boton.innerHTML = "No tocar"
 
-const respuesta = document.querySelector("#li");
-// const input = document.querySelector("#input");
+// const respuesta = document.querySelector("#li");
+// // const input = document.querySelector("#input");
 
-boton.onclick = () => {
-    const CrearElemento = document.createElement("li");
-    CrearElemento.innerHTML = "¿Porque tocaste?"
-    respuesta.append(CrearElemento);
-}
+// boton.onclick = () => {
+//     const CrearElemento = document.createElement("li");
+//     CrearElemento.innerHTML = "¿Porque tocaste?"
+//     respuesta.append(CrearElemento);
+// }
