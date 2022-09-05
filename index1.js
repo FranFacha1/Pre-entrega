@@ -1,62 +1,47 @@
 const pedirBebida = document.querySelector("#boton");
-
-// const respuesta2 = document.querySelector("#respuesta2");
-
-const boton1 = document.querySelector("#boton1");
-const boton2 = document.querySelector("#boton2");
-
-// const guardarBebida = [];
+const contenedorBebidadas = document.getElementById('contenedor-bebidas')
+const titulo = document.getElementById('titulo')
 
 const bebidaAleatoria = [
-    {nombre: "Vodka", precio : 5000},
-    {nombre: "Fernet", precio : 8000},
-    {nombre: "Gin Tonic", precio : 4000},
-    {nombre: "Jägermeister", precio : 12000},
-    {nombre: "Chandon", precio : 10000},
-    {nombre: "Freeze", precio : 1200},
-    {nombre: "Blue Label", precio : 20000},
-    {nombre: "Whisky", precio : 15000}
+    {nombre: "Vodka", imgurl: 'https://assets.stickpng.com/images/580b57fcd9996e24bc43c23f.png',precio : 5000},
+    {nombre: "Fernet", imgurl: 'https://www.diadelamigo.branca.com.ar/assets/app/images/dda2020/botella_home.png',precio : 8000},
+    {nombre: "Gin Tonic", imgurl: 'https://s3-eu-west-1.amazonaws.com/v2.beefeatergin.com/stage/ProductToMarket/3959/productList/9/productList_500x753.png',precio : 4000},
+    {nombre: "Jägermeister", imgurl: "https://images.ctfassets.net/f6vi7rcobfjz/1mDN1ZFIjSiIkk8g4U4cW0/9282a4494547ee7c7f635930c329ffa6/product_page_hero_bottlre.png?&w=1366&q=66" ,precio : 12000},
+    {nombre: "Chandon", imgurl: 'https://www.chandon.com.ar/wp-content/uploads/2021/03/black_brut_ok.png',precio : 10000},
+    {nombre: "Freeze", imgurl: 'https://4-reinas-bebidas.tiendalite.com/images/products/500/40653942-256.png',precio : 1200},
+    {nombre: "Blue Label", imgurl: "https://dislicoresqa.vtexassets.com/arquivos/ids/257731/002218-JOHNNIE_WALKER_BLUE_LABEL_BOTELLA_200ML.png?v=637892570786270000" ,precio : 20000},
+    {nombre: "Absenta", imgurl: "https://teichenne.com/wp-content/uploads/2022/04/G83-JS-Absinthe-Green-70cl-v0_Front-View-2-1024x1024.png" ,precio : 15000}
 ]
 
-boton.onclick = () => {
-    document.querySelector("#imgs").style.display = "block";
-    document.querySelector("#imgs1").style.display = "block";
-    document.querySelector("#titulo").style.display = "block";
-}
+pedirBebida.onclick = () => {
+    titulo.style.display = 'block'
 
-boton1.onclick = () => {
-    localStorage.setItem("TocoBoton1",true);
-}
-
-boton2.onclick = () => {
-    localStorage.setItem("TocoBoton2",true);
-}
-
-pedirBebida.onclick = (e) => {
-    // const mostrarBebidaAleatoria = document.createElement("li");
     let numeroRandom = numeroAleatorio();
-    // mostrarBebidaAleatoria.innerHTML = `${bebidaAleatoria[numeroRandom].nombre} $${bebidaAleatoria[numeroRandom].precio} ` //Muestra el nombre + el precio
-    // mostrarBebidaAleatoria.innerHTML = bebidaAleatoria[numeroRandom].nombre
-    // respuesta2.append(mostrarBebidaAleatoria);
-    // console.log(bebidaAleatoria[numeroRandom]);
-    localStorage.setItem("bebida", JSON.stringify(bebidaAleatoria[numeroRandom]));
+    resultadoUNO = numeroRandom[0]
+    resultadoDOS = numeroRandom[1]
+    contenedorBebidadas.innerHTML = `
+
+                    <div class="bebida">
+                        <img src="${bebidaAleatoria[resultadoUNO].imgurl}">
+                        <span>${bebidaAleatoria[resultadoUNO].nombre}</span>
+                        <button id="bebida-izquierda" class="boton-bebidas">Bebida I</button>
+                    </div>
+                    
+                    <div class="bebida">
+                        <img src="${bebidaAleatoria[resultadoDOS].imgurl}">
+                        <span>${bebidaAleatoria[resultadoDOS].nombre}</span>
+                        <button id="bebida-izquierda" class="boton-bebidas"> Bebida II</button>
+                    </div>`
 };
 
-function numeroAleatorio(){
-    return Math.floor(Math.random()*bebidaAleatoria.length)
-}
-
-
-boton.onclick = () => {
-    document.querySelector("#imgs").style.display = "block";
-    document.querySelector("#imgs1").style.display = "block";
-    document.querySelector("#titulo").style.display = "block";
-}
-
-boton1.onclick = () => {
-    localStorage.setItem("TocoBoton1",true);
-}
-
-boton2.onclick = () => {
-    localStorage.setItem("TocoBoton2",true);
+function numeroAleatorio() {
+    var resultado1 = Math.floor(Math.random() * bebidaAleatoria.length)
+    
+    for (let index = 0; index < bebidaAleatoria.length; index++) {
+        var resultado2 = Math.floor(Math.random() * bebidaAleatoria.length)
+        if (resultado1 != resultado2) {
+            break
+        }
+    }
+    return [resultado1, resultado2]
 }

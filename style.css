@@ -12,6 +12,11 @@ body {
 
 /* CSS DEL JUEGO */
 
+.cartas {
+    height: 100vh;
+    width: 100%;
+}
+
 .div-boton {
     height: 200px;
     display: flex;
@@ -41,40 +46,43 @@ body {
 
 }
 
-
 .boton:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }   
-
-.cartas {
-    height: 100vh;
-    width: 100%;
-}
 
 .titulo {
     display: none;
     text-align: center;
     color: #fff;
-    font-size: 2rem;
-}
-
-.contenedor-img {
-    height: 200px;
-    margin-top: 60px;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+    font-size: 3rem;
 }
  
-.contenedor-botones {
+#contenedor-bebidas {
    display: flex;
    justify-content: space-around;
    align-items: center;
 }
 
-.imgs {
-    display: none;
-    border-radius: 20px;
+#contenedor-bebidas .bebida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+#contenedor-bebidas .bebida img{
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+}
+
+#contenedor-bebidas .bebida span{
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
 }
 
 .boton-bebidas {
@@ -92,8 +100,7 @@ body {
 
 .boton-bebidas:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-} 
-
+}
 
 .footer {
     margin-top: 100px;
