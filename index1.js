@@ -3,7 +3,7 @@ const contenedorBebidadas = document.getElementById('contenedor-bebidas')
 const titulo = document.getElementById('titulo')
 
 const bebidaAleatoria = [
-    {nombre: "Vodka", imgurl: 'https://assets.stickpng.com/images/580b57fcd9996e24bc43c23f.png',precio : 5000},
+    {nombre: "Vodka", imgurl: 'https://pngimg.com/uploads/vodka/vodka_PNG73893.png',precio : 5000},
     {nombre: "Fernet", imgurl: 'https://www.diadelamigo.branca.com.ar/assets/app/images/dda2020/botella_home.png',precio : 8000},
     {nombre: "Gin Tonic", imgurl: 'https://s3-eu-west-1.amazonaws.com/v2.beefeatergin.com/stage/ProductToMarket/3959/productList/9/productList_500x753.png',precio : 4000},
     {nombre: "Jägermeister", imgurl: "https://images.ctfassets.net/f6vi7rcobfjz/1mDN1ZFIjSiIkk8g4U4cW0/9282a4494547ee7c7f635930c329ffa6/product_page_hero_bottlre.png?&w=1366&q=66" ,precio : 12000},
@@ -32,6 +32,15 @@ pedirBebida.onclick = () => {
                         <span>${bebidaAleatoria[resultadoDOS].nombre}</span>
                         <button id="bebida-izquierda" class="boton-bebidas"> Bebida II</button>
                     </div>`
+
+
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Comenzo el juego, ¡Buena suerte! 😀',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
 };
 
 function numeroAleatorio() {
