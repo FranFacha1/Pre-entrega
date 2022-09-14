@@ -1,3 +1,25 @@
+fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+    .then((res) => res.json())
+    .then((json) =>  {
+    let pokeArray = json.results;
+    console.log(pokeArray);
+    let html = "";
+    pokeArray.forEach((poke) => {
+        html += `
+            <div>
+                <p>${poke.name}</p>
+                <a href = "${poke.url} target = "_blank" ">${poke.url}</a>
+            </div>
+        
+        `
+    });
+
+    document.getElementById("listado-pokes").innerHTML = html;
+})
+.catch ((e) => {
+    console.log(json)
+})
+
 const pedirBebida = document.querySelector("#boton");
 const contenedorBebidadas = document.getElementById('contenedor-bebidas')
 const titulo = document.getElementById('titulo')
